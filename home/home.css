@@ -1,10 +1,16 @@
+body {
+   display: block;
+   margin: 0px;
+   padding: 0px;
+}
 .nagivation-bar {
-   display:flex;   
+   display: flex;   
    justify-content: center;
-   position: fixed;
+   position:sticky;
    top:0px;
    left: 0px;
    right: 0px;
+   bottom: 0px;
 
    height: 64px;
    margin: 0px;
@@ -40,6 +46,7 @@
    color: rgb(255, 255, 245);
    height: 64px;
    width: auto;
+   margin: 0px;
    padding: 0px 20px;
    text-decoration: none;  
    text-align: center;
@@ -51,16 +58,17 @@
 .dropdown {
    position: relative;
    display: inline-block;   
+   z-index: 10;
 }
 .dropdown ul {
    display: none;   
    list-style: none;
    position: absolute;
-   z-index: 99;
-   width: 250px;
+   min-width: 250px;
    background-color: rgb(81, 81, 83);
    cursor: pointer;
    padding: 0px;
+   box-shadow: 0px 0px 1px gray;
 }
 .dropdown ul li {
    display: block;
@@ -72,21 +80,108 @@
    background-color: rgb(81, 81, 83); 
    color: white;
    text-align: center;
+   padding: 0px;
+   margin: 0px;
 }
 .dropdown:hover ul {display: block;}
-#search-tool {
-    display: inline-block;
-   background-image: url(image/search.png);
-   background-position: 0%;
-   background-size: cover;
-   margin: 0px;
-   padding: 0px;
-   width: 220px;
-   height: 64px;
-}
+.dropdown:hover .dropdown-present {background-color: rgb(98, 98, 101);}
+
 .flag {
    width: 20px; 
    height: 20px;
    margin: 0px;
    padding: 0px;
 }
+
+.slider-container {
+   display: block;
+   position: relative;
+   width: 100vw;
+   height: 500px;
+   margin: auto;
+   overflow: hidden;
+   z-index: -1;
+}
+.slider-container .slider-content {
+   /* position: absolute; */
+   height: 100%;
+   overflow: hidden;
+   z-index: 1;
+}
+.slider-container .slider-content img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: 1;
+}
+.slider-container .slider-buttons {
+   position: absolute;
+   top: 45%;
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   z-index: 3;
+}
+.slider-container .slider-buttons button {
+   display: block;
+   background-color: white;
+   opacity: 10%;
+   border: none;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   margin-left: 10px;
+   margin-right: 25px;
+   cursor: pointer;
+}
+.slider-container .slider-buttons button:hover {
+   opacity: 50%;
+}
+.slider-dots {
+   display: flex;
+   justify-content: center;
+   position: absolute;
+   width: 100%;
+   bottom: 20px;
+   z-index: 3;
+}
+.slider-dots button {
+   background-color: orange;
+   opacity: 50%;
+   display: block;
+   width: 20px;
+   height: 20px;
+   border: none;
+   border-radius: 50%;
+   margin: 0px 10px;
+   cursor: pointer;
+}
+.slider-dots button:hover {
+   opacity: 100%;
+}
+
+
+/* .slider {
+   width: 1300px;
+   max-width: 1400vw;
+   height: 500px;
+   margin: auto;
+   position: relative;
+}
+.slider .lists {
+   list-style: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   display: flex;
+   width: max-content;
+}
+
+.slider .lists img {
+   display: block;
+   width: 1300px;
+   max-width: 100vw;
+   height: 100%;
+   object-fit: cover;
+} */
