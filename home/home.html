@@ -46,20 +46,20 @@
       
       <div class="slider-container">
          <a href="https://youtube.com"><div class="slider-content">
-            <img src="image/slides/slide1.png">
-            <img src="image/slides/slide4.png">
-            <img src="image/slides/slide5.png">
-            <img src="image/slides/slide6.png">
+            <img src="image/slides/slide1.png" id="slider-picture-1">
+            <img src="image/slides/slide4.png" id="slider-picture-2">
+            <img src="image/slides/slide5.png" id="slider-picture-3">
+            <img src="image/slides/slide6.png" id="slider-picture-4">
          </div></a>
          <div class="slider-buttons">
-            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            <button id="prev-button" onclick="showSlide(currentSlideIndex + 1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="next-button" onclick="showSlide(currentSlideIndex - 1 )"><i class="fa-solid fa-arrow-right"></i></button>
          </div>
          <div class="slider-dots">
-            <button class="dot1"></button>
-            <button class="dot2"></button>
-            <button class="dot3"></button>
-            <button class="dot4"></button>
+            <button id="slider-dot-1" class="active"></button>
+            <button id="slider-dot-2"></button>
+            <button id="slider-dot-3"></button>
+            <button id="slider-dot-4"></button>
          </div>
       </div>
    
@@ -236,6 +236,7 @@
           1
           "
       </h1>
+      <script src="home.js"></script>
    </body>
 
 </html>
