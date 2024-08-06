@@ -1,7 +1,13 @@
+a {
+   text-decoration: none;
+   color: black;
+}
 body {
    display: block;
    margin: 0px;
    padding: 0px;
+   font-family: "Roboto", sans-serif;
+   background-color: rgb(245, 245, 247);
 }
 .nagivation-bar {
    display: flex;   
@@ -48,15 +54,15 @@ body {
    padding: 0px 20px;
    text-decoration: none;  
    text-align: center;
-   font-size: 16px;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 15px;
+   font-family: "Roboto", sans-serif;
 }
 .nagivation-bar li a:hover {background-color: rgb(98, 98, 101);}
 
 .dropdown {
    position: relative;
    display: inline-block;   
-   z-index: 20;
+   z-index: 9;
 }
 .dropdown ul {
    display: none;   
@@ -66,7 +72,7 @@ body {
    background-color: rgb(81, 81, 83);
    cursor: pointer;
    padding: 0px;
-   box-shadow: 0px 0px 1px gray;
+   box-shadow: 0px 0px 2px rgb(0, 0, 0);
    margin: 0px;
 }
 .dropdown ul li {
@@ -117,9 +123,8 @@ body {
 .slider-container {
    display: block;
    position: relative;
-   /* width: 1350px; */
-   width: 100vw;
-   min-height: 500px;
+   width: 99vw;
+   min-height: 450px;
    height: fit-content;
    margin: auto;
    overflow: hidden;
@@ -239,4 +244,367 @@ body {
 }
 .slider-thanks-container .slider-thanks-buttons button:hover {
    opacity: 60%;
+}
+
+.items {
+   display: block;
+   position: relative;
+   top: 50px;
+   width: 1200px;
+   height: 600px;
+   margin: 0px auto;
+   transform: translateX(-4%);
+   font-size: 2.5rem;
+   font-weight: bolder;
+   text-align: center;
+   color: black;
+   text-decoration: none;
+}
+.items .items-name {
+   display: block;
+   color: black;
+   text-decoration: none;
+   transform: translateX(3%);
+   cursor: pointer;
+}
+.items .list-products {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   
+}
+.items .list-products .product {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   height: 350px;
+   width: 250px;
+   position: relative;
+   list-style: none;
+   box-shadow: 0px 0px 5px 1px rgba(217, 217, 217, 0.779);
+   border-radius: 10px;
+   background-color: white;
+   margin: 0px 12px;
+}
+.items .list-products .product .product-cost {
+   color: blue;
+   display: flex;
+   justify-content: space-between;
+   font-size: 16px;
+   text-align: left;
+   margin: 10px 20px 20px 20px;
+}
+.items .list-products .product .product-cost .old-cost {
+   text-decoration: line-through;
+   font-weight: lighter;
+   color: rgb(110, 110, 110);
+   position: relative;
+   font-size: 12px;
+}
+.items .list-products .product .product-cost .product-sale {
+   color: rgb(110, 110, 110);
+   font-weight: lighter;
+   position: relative;
+   font-size: 12px;
+}
+.items .list-products .product .product-tag {
+   position: absolute;
+   width: 50px;
+   height: 50px;
+   right: 10px;
+   top: 10px;
+   object-fit: cover;
+}
+.items .list-products .product .product-name {  
+   text-decoration: none;
+   color: black;
+   display: inline-block;
+   font-size: 1rem;
+   padding: 10px;
+   cursor: pointer;
+   margin: 10px;
+}
+.items .list-products .product img {
+   width: 250px;
+   height: 200px;
+   object-fit: contain;
+   cursor: pointer;
+   border-radius: 20px;
+}
+.items .more-items {
+   text-align: center; 
+   width: 200px;
+   height: 50px;
+   border-radius: 10px;
+   background-color: white;
+   border: 1px solid rgb(0, 102, 204);
+   color: rgb(0, 102, 204);
+   cursor: pointer;
+   transform: translateX(20%);
+}
+.items .more-items:hover {
+   background-color: rgb(0, 102, 204);
+   color: white;
+}
+.items .list-products .product:hover {
+   box-shadow: 0px 0px 30px 1px rgb(183, 183, 183);
+   border: 1spx solid rgb(199, 199, 199);
+}
+#home-bottom {
+   display: block;
+   width: 1200px;
+   height: fit-content;
+   margin: 10px auto 0px auto;
+   cursor: pointer;
+}
+
+.news-title {
+   font-size: 2rem;
+   font-weight: bolder;
+   display: block;
+   width: 500px;
+   text-align: center   ;
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+   margin: 70px auto 20px auto;
+}
+.news {
+   display: flex;
+   position: relative;
+   width: 1300px;
+   height: 360px;
+   margin: 0px auto;
+   justify-content: center;
+}
+.news .news-content {
+   display: block;
+   position: relative;
+   width: 400px;
+   height: 100%;
+   border-radius: 10px;
+   margin: 0px 15px;
+   box-shadow: 0px 0px 5px 1px rgba(217, 217, 217, 0.779);
+}
+.news .news-content:hover {
+   box-shadow: 0px 0px 30px 1px rgb(183, 183, 183);
+   border: 1spx solid rgb(199, 199, 199);
+}
+.news .news-content a {
+   text-decoration: none;
+   color: black;
+}
+.news .news-content img {
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   top: 0;
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   margin: 0px;
+   padding: 0px;
+}
+.news .news-content a p {
+   margin: 20px 20px 50px 20px;
+   font-size: 20px;
+   font-weight: 500;
+}
+.news .news-content .date {
+   position: absolute;
+   bottom: 0px;
+   left: 20px;
+   color: rgb(134, 136, 169);
+}
+#more-news {
+   display: block;
+   text-align: center; 
+   width: 200px;
+   height: 50px;
+   border-radius: 10px;
+   background-color: white;
+   border: 1px solid rgb(0, 102, 204);
+   color: rgb(0, 102, 204);
+   cursor: pointer;
+   margin: 30px auto;
+}
+#more-news:hover {
+   background-color: rgb(0, 102, 204);
+   color: white;
+}
+
+.get-info {
+   display: flex;
+   flex-direction: column;
+   margin: 70px 0px 0px 0px;
+   padding: 30px 0px 50px 0px;
+   width: 99vw;
+   height: fit-content;
+   text-align: center;
+   background-color: rgb(242, 242, 242);
+}
+.get-info h1 {
+   margin: 10px;
+   font-size: 22px;
+}
+.get-info p {
+   margin: 20px;
+   color: rgb(81, 81, 84);
+}
+.get-info #enter-email {
+   display: block;
+   position: relative;
+   width: 600px;
+   height: 40px;
+   margin: 0px auto;
+}
+.get-info #enter-email input {
+   width: 100%;
+   height: 100%;
+   padding: 0px 20px;
+   border-radius: 20px;
+   background-color: white;
+   border: none;
+   outline: none;
+   /* margin: 0px 0px 50px 0px; */
+}
+.get-info #enter-email button {
+   display: block;
+   position: absolute;
+   width: 120px;
+   height: 100%;
+   padding: 0px 20px;
+   border-radius: 20px;
+   background-color: rgb(0, 102, 204);
+   color: white;
+   border: none;
+   top: 0;
+   right: -40px;
+   cursor: pointer;
+}  
+.get-info #enter-email button:hover {
+
+   background-color: rgb(36, 142, 206);
+}
+
+#about-us {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   position: relative;
+   width: 99vw;
+   height: 650px;
+   background-color: rgb(29, 29, 31);
+}
+#about-us #content {
+   display: flex;
+   justify-content: center;
+   width: 1300px;
+   color: white;
+   margin: auto;
+}
+#about-us div {
+   margin: 0px;
+   width: 400px;
+   height: 100%;
+   text-align: center;
+   padding: 0px 30px;
+}  
+#about-us #content #us a {
+   display: block;
+   width: 200px;
+   height: 50px;
+   object-fit: cover;
+   margin: 30px 10px 30px 10px;
+   padding: 0px;
+}
+#about-us #us p {
+   margin: 30px 0px;
+   text-align: left;   
+   line-height: 25px;
+   letter-spacing: 1px;
+}
+#about-us #content #us #custom-box {
+   display: flex;
+   flex-direction: column;
+   justify-content: left;
+   background-color: rgb(236, 240, 241);
+   width: 100%;
+   margin: auto;
+   height: 150px;
+   border-radius: 10px;
+   color: black;
+   font-weight: 800;
+}
+#about-us #content #us #custom-box #center-support {
+   margin: 15px 10px;
+   font-weight: 500;
+   text-decoration: underline;
+   font-size: 18px;
+}
+#about-us #content #us #custom-box a {
+   text-align: right;
+   margin: 0px;
+   width: 100%;
+   font-size: 12px;
+   padding: 0px;
+}
+#about-us #content #us #custom-box a phone {
+   font-size: 18px;
+   color: rgb(83, 104, 204);
+   margin-right: 10px;
+}
+#about-us #content #us #contact-us {
+   display: flex;
+   position: relative;
+   justify-content: center;
+   width: 100%;
+   margin: 0px;
+}
+#about-us #content #us #contact-us img {
+   display: inline;
+   width: 60px;
+   height: 60px;
+   padding: 0px;
+   margin: 0px;
+}
+#about-us .about-us-colum {
+   display: block;
+   text-align: left;
+   line-height: 40px;
+}
+#about-us .about-us-colum p {
+   font-size: 18px;
+   font-weight: 600;
+}  
+#about-us .about-us-colum a {
+   display: block;
+   color: rgb(134, 134, 139);
+}
+#about-us .about-us-colum a:hover {
+   text-decoration: underline;
+}
+
+#address-and-more {
+   display: flex;
+   width: 1300px;
+   background-color: rgb(29, 29, 31);
+   height: 400px;
+   margin: auto;
+   position: relative;
+   border-top: 1px solid rgb(81, 81, 75);
+   color: rgb(81, 81, 75);
+   /* padding: 10px 0px 0px 0px; */
+}
+#address-and-more p {
+   width: 60%;
+   text-align: left;
+}
+#address-and-more img {
+   width: 200px;
+   height: 60px;
+   object-fit: cover;
+   display: block;
+   position: absolute;
+   top: 10%;
+   right: 0;
 }
