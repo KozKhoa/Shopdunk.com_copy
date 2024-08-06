@@ -4,7 +4,6 @@
       <title>Đại lý ủy quyền Apple cửa hàng Apple chính hãng</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
       <link rel="stylesheet" href="home.css">
-      <script src="home.js"></script>
    </head>
    <body>
       <ul class="nagivation-bar">
@@ -45,15 +44,19 @@
       </ul>
       
       <div class="slider-container">
-         <a href="https://youtube.com"><div class="slider-content">
-            <img src="image/slides/slide1.png" id="slider-picture-1">
-            <img src="image/slides/slide4.png" id="slider-picture-2">
-            <img src="image/slides/slide5.png" id="slider-picture-3">
-            <img src="image/slides/slide6.png" id="slider-picture-4">
-         </div></a>
+         <div class="slider-content">
+            <a href="https://youtube.com"><img src="image/slides/slide6.png" title="pic-0"
+               alt="This is the last picture that use to make the transition smoother"></a>
+            <a href="https://youtube.com"><img src="image/slides/slide1.png" title="pic-1"></a>
+            <a href="https://youtube.com"><img src="image/slides/slide4.png" title="pic-2"></a>
+            <a href="https://youtube.com"><img src="image/slides/slide5.png" title="pic-3"></a>
+            <a href="https://youtube.com"><img src="image/slides/slide6.png" title="pic-4"></a>
+            <a href="https://youtube.com"><img src="image/slides/slide1.png" title="pic-0"
+               alt="This is the first picture that use to make the transition smoother"></a>
+         </div>
          <div class="slider-buttons">
-            <button id="prev-button" onclick="showSlide(currentSlideIndex + 1)"><i class="fa-solid fa-arrow-left"></i></button>
-            <button id="next-button" onclick="showSlide(currentSlideIndex - 1 )"><i class="fa-solid fa-arrow-right"></i></button>
+            <button id="prev-button" ><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="next-button" ><i class="fa-solid fa-arrow-right"></i></button>
          </div>
          <div class="slider-dots">
             <button id="slider-dot-1" class="active"></button>
@@ -62,8 +65,38 @@
             <button id="slider-dot-4"></button>
          </div>
       </div>
-   
-
+      
+   <!-- Cân nhắc dùng hiệu quả ưu tiên sắp xếp các đối tượng để tạo hiệu ứng chuyển động mượt mà -->
+      <div class="slider-thanks-container">
+         <div class="slider-thanks-content">
+            <a href="https://youtube.com" ><img title="thanks-0-8" src="image/thanks/Trung_Anh.png"
+               alt="This is the last picture that only use to make the transition smooother"></a>
+            <a href="https://youtube.com" ><img title="thanks-0-9" src="image/thanks/Trung_Ruoi.png"
+               alt="This is the last picture that only use to make the transition smooother"></a>
+            <a href="https://youtube.com" ><img title="thanks-0-10" src="image/thanks/Viet_Anh.png"
+               alt="This is the last picture that only use to make the transition smooother"></a>
+            <a href="https://youtube.com" ><img title="thanks-1"  src="image/thanks/B-Tran.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-2"  src="image/thanks/Dinh_Tu.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-3"  src="image/thanks/Duydam.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-4"  src="image/thanks/HuyenLizze_Quynh Koool.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-5"  src="image/thanks/Le_Bong.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-6"  src="image/thanks/Quang_Thang.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-7"  src="image/thanks/Thu_Mit.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-8"  src="image/thanks/Trung_Anh.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-9"  src="image/thanks/Trung_Ruoi.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-10" src="image/thanks/Viet_Anh.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-0-1" src="image/thanks/B-Tran.png"
+               alt="This is the first picture that only use to make the transition smoother"></a>
+            <a href="https://youtube.com" ><img title="thanks-0-2" src="image/thanks/Dinh_Tu.png"
+               alt="This is the first picture that only use to make the transition smoother"></a>
+            <a href="https://youtube.com" ><img title="thanks-0-3"  src="image/thanks/Duydam.png"
+               alt="This is the first picture that only use to make the transition smoother"></a>
+         </div>
+         <div class="slider-thanks-buttons">
+            <button id="prev-thanks-button" ><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="next-thanks-button" ><i class="fa-solid fa-arrow-right"></i></button>
+         </div>
+      </div>
 
       <h1>rdihlvaolhfasjfd pofjso<button>df;asjf3koe</button> sd'faj popd sjadpj fpofpsd fsap ojdpojaspd fjsp fjpposdjpsd;sdg;ads;lk d;sl ;lsdf;
          lsadf; ajfj;ad;sad;ljsd
@@ -236,7 +269,8 @@
           1
           "
       </h1>
-      <script src="home.js"></script>
+      <script src="code-js/thanks.js"></script>
+      <script src="code-js/slider.js"></script> 
    </body>
 
 </html>
