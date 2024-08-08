@@ -139,7 +139,7 @@ body {
 .slide-bar .slide-bar-table {
    display: block;
    position: absolute;
-   min-width: 250px;
+   min-width: 310px;
    width: 40vw;
    height: 100vh;
    background-color: rgb(81, 81, 83);
