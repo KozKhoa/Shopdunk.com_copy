@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Đại lý ủy quyền Apple cửa hàng Apple chính hãng</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="home/image/icon-tab.png">
+      <!-- <link rel="icon" href="home/images/vietnam-flag.png"> -->
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+      <link rel="stylesheet" href="home/home.css">
+      <!-- Thêm font chữ Roboto trong google font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <nav class="nagivation-bar">
+         <div id="logo-and-menu">
+            <button id="menu-button" onclick=showMenu()><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></button>
+            <a href="#"><img id="shopdunk-logo" src="home/images/shopdunk-logo.png" alt="This is the logo for shopdunk"></a>
+         </div>
+         <nav-content class="hide-on-mobile"><a href="https://youtube.com">iPhone</a></nav-content>
+         <nav-content class="hide-on-mobile"><a href="https://youtube.com">iPad</a></nav-content>
+         <nav-content class="hide-on-mobile"><a href="https://youtube.com">Mac</a></nav-content>
+         <nav-content class="hide-on-mobile"><a href="https://youtube.com">Watch</a></nav-content>
+         <nav-content class="hide-on-mobile"><a href="https://youtube.com">Máy cũ</a></nav-content>
+         <nav-content class="hide-on-mobile"><a href="https://youtube.com">Phụ kiện</a></nav-content>
+         <nav-content id="service" class="hide-on-mobile" style="padding: 0px;">
+            <div class="dropdown hide-on-mobile">
+               <nav-content class="dropdown-title"><a href="https://youtube.com">Dịch vụ &#x25BE;</a></nav-content>
+               <div class="dropdown-table" style="left: 0px;">
+                  <a href="https://youtube.com" class="dropdown-content">Bảo Hành Ủy Quyền Apple<br>(ShopDunk Care)</a>
+                  <a href="https://youtube.com" class="dropdown-content">Trả Góp</a>
+                  <a href="https://youtube.com" class="dropdown-content">Thu Cũ Đổi Mới </a>
+                  <a href="https://youtube.com" class="dropdown-content">WorkShop</a>
+                  <a href="https://youtube.com" class="dropdown-content">MBTI </a>
+                  <a href="https://youtube.com" class="dropdown-content">Sim Thẻ</a>
+                  <a href="https://youtube.com" class="dropdown-content">Apple Care</a>
+                  <a href="https://youtube.com" class="dropdown-content">Bán hàng doanh nghiệp</a>
+                  <a href="https://youtube.com" class="dropdown-content">Microsoft-office</a>           
+               </div>
+            </div>
+         </nav-content>  
+         <nav-content class="hide-on-mobile"><a href="https://youtube.com" >Tin tức</a></nav-content>
+         <nav-content class="hide-on-mobile"><a href="https://youtube.com" >Khuyến mại</a></nav-content>
+         <nav-content><a href="https://youtube.com" id="search"><i class="fa-solid fa-magnifying-glass"></i></a></nav-content>
+         <nav-content><a href="https://youtube.com" id="cart"><i class="fa-solid fa-cart-shopping"></i></a></nav-content>
+         <nav-content  id="user" style="padding: 0px;">
+            <script src="home/code-js/call-user-table.js"></script>
+            <div class="dropdown">
+               <nav-content class="dropdown-title"><i class="fa-regular fa-user"></i></nav-content>
+               <div class="dropdown-table" style="right: 0px;">
+                  <a href="https://youtube.com" class="dropdown-content">Tạo tài khoản</a>
+                  <a href="https://youtube.com" class="dropdown-content">Đăng nhập</a>           
+               </div>
+            </div>
+         </nav-content>
+  
+         <nav-content style="width: 15px; padding: 0px 10px;"><a href="https://youtube.com"><img src="home/images/vietnam-flag.png" class="flag" ></a></nav-content>
+         <nav-content style="width: 15px; padding: 0px 10px;"><a href="https://youtube.com"><img src="home/images/us-flag.png" class="flag"></a></nav-content>
+      </nav>
+      
+      <div class="slide-bar" >
+         <ul class="slide-bar-table">
+            <li><button id="exit-button" onclick=closeMenu()>
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></i>
+            </button></li>
+            <li class="slide-bar-content"><a href="#">iPhone</a></li>
+            <li class="slide-bar-content"><a href="#">iPad</a></li>
+            <li class="slide-bar-content"><a href="#">Mac</a></li>
+            <li class="slide-bar-content"><a href="#">Watch</a></li>
+            <li class="slide-bar-content"><a href="#">Phụ kiện</a></li>
+            <li class="slide-bar-content"><a href="#">Dịch vụ</a></li>
+            <li class="slide-bar-content"><a href="#">Tin tức</a></li>
+            <li class="slide-bar-content"><a href="#">Khuyến mại</a></li>
+            <li class="slide-bar-content"><a href="#">Máy cũ</a></li>
+            <li class="slide-bar-content"><a href="#">Ngôn ngữ</a></li>
+         </ul>
+      </div>
+      
+      <div class="slider-container">
+         <div id="slider-img-on-pc" class="slider-content">
+            <a href="https://youtube.com"><img src="home/images/slides/slide9.png" title="pic-0-9"
+               alt="This is the last picture that use to make the transition smoother"></a>
+               
+            <a href="https://youtube.com"><img src="home/images/slides/slide1.png" title="pic-1"></a>
+            <a href="https://youtube.com"><img src="home/images/slides/slide2.jpg" title="pic-2"></a>
+            <a href="https://youtube.com"><img src="home/images/slides/slide3.jpg" title="pic-3"></a>
+            <a href="https://youtube.com"><img src="home/images/slides/slide4.png" title="pic-4"></a>
+            <a href="https://youtube.com"><img src="home/images/slides/slide5.png" title="pic-5"></a>
+            <a href="https://youtube.com"><img src="home/images/slides/slide6.png" title="pic-6"></a>
+            <a href="https://youtube.com"><img src="home/images/slides/slide7.png" title="pic-7"></a>
+            <a href="https://youtube.com"><img src="home/images/slides/slide8.png" title="pic-8"></a>
+            <a href="https://youtube.com"><img src="home/images/slides/slide9.png" title="pic-9"></a>
+               
+            <a href="https://youtube.com"><img src="home/images/slides/slide1.png" title="pic-0-1"
+               alt="This is the first picture that use to make the transition smoother"></a>
+         </div>
+            <!--  -->
+         <div id="slider-img-on-mobile" class="slider-content">
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide9.png" title="pic-0-9"
+               alt="This is the last picture that use to make the transition smoother"></a>
+               
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide1.png" title="pic-1"></a>
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide2.jpg" title="pic-2"></a>
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide3.jpg" title="pic-3"></a>
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide4.png" title="pic-4"></a>
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide5.png" title="pic-5"></a>
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide6.png" title="pic-6"></a>
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide7.png" title="pic-7"></a>
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide8.png" title="pic-8"></a>
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide9.png" title="pic-9"></a>
+               
+            <a href="https://youtube.com"><img src="home/images/slides-mobile/slide1.png" title="pic-0-1"
+               alt="This is the first picture that use to make the transition smoother"></a>
+         </div>
+         <div class="slider-buttons">
+            <button id="prev-button" ><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="next-button" ><i class="fa-solid fa-arrow-right"></i></button>
+         </div>
+         <div class="slider-dots">
+            <button id="slider-dot-1" class="active"></button>
+            <button id="slider-dot-2"></button>
+            <button id="slider-dot-3"></button>
+            <button id="slider-dot-4"></button>
+            <button id="slider-dot-5"></button>
+            <button id="slider-dot-6"></button>
+            <button id="slider-dot-7"></button>
+            <button id="slider-dot-8"></button>
+            <button id="slider-dot-9"></button>
+         </div>
+      </div>
+
+      <div class="slider-thanks-container">
+         <div class="slider-thanks-content">
+            <a href="https://youtube.com" ><img title="thanks-0-8" src="home/images/thanks/Trung_Anh.png"
+               alt="This is the last picture that only use to make the transition smooother"></a>
+            <a href="https://youtube.com" ><img title="thanks-0-9" src="home/images/thanks/Trung_Ruoi.png"
+               alt="This is the last picture that only use to make the transition smooother"></a>
+            <a href="https://youtube.com" ><img title="thanks-0-10" src="home/images/thanks/Viet_Anh.png"
+               alt="This is the last picture that only use to make the transition smooother"></a>
+            <a href="https://youtube.com" ><img title="thanks-1"  src="home/images/thanks/B-Tran.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-2"  src="home/images/thanks/Dinh_Tu.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-3"  src="home/images/thanks/Duydam.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-4"  src="home/images/thanks/HuyenLizze_Quynh Koool.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-5"  src="home/images/thanks/Le_Bong.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-6"  src="home/images/thanks/Quang_Thang.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-7"  src="home/images/thanks/Thu_Mit.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-8"  src="home/images/thanks/Trung_Anh.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-9"  src="home/images/thanks/Trung_Ruoi.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-10" src="home/images/thanks/Viet_Anh.png"></a>
+            <a href="https://youtube.com" ><img title="thanks-0-1" src="home/images/thanks/B-Tran.png"
+               alt="This is the first picture that only use to make the transition smoother"></a>
+            <a href="https://youtube.com" ><img title="thanks-0-2" src="home/images/thanks/Dinh_Tu.png"
+               alt="This is the first picture that only use to make the transition smoother"></a>
+            <a href="https://youtube.com" ><img title="thanks-0-3"  src="home/images/thanks/Duydam.png"
+               alt="This is the first picture that only use to make the transition smoother"></a>
+         </div>
+         <div class="slider-thanks-buttons">
+            <button id="prev-thanks-button" ><i class="fa-solid fa-arrow-left"></i></button>
+            <button id="next-thanks-button" ><i class="fa-solid fa-arrow-right"></i></button>
+         </div>
+      </div>
+<!--  -->
+      <!-- Có thể thêm thẻ product tag vào để thông báo sản phẩm đó là hàng mới,đc giảm giá hay các kiểu 
+         <img class="product-tag" src=""></img> 
+      -->
+      <div class="items" id="iPhone">
+         <a href="#" class="items-name">iPhone</a>
+         <ul class="list-products">
+            <li class="product">
+               <img class="product-tag" src="home/images/product-tags/0-percent.png"></img>
+               <a href= "#"><img class="product-img" src="home/images/iphone-images/iphone-13-128GB.jpg"></a>
+               <a href="#" class="product-name">iPhone 13 - 128GB</a>
+               <div class="product-cost">
+                  13.690.000₫
+                  <div class="old-cost"> 24.990.000₫ </div>
+                  <div class="product-sale">-45%</div>
+               </div>
+            </li>
+            <li class="product">
+               <a href= "#"><img class="product-img" src="home/images/iphone-images/iphone-15-128GB.jpg"></a>
+               <a href="#" class="product-name">iPhone 15 - 128GB</a>
+               <div class="product-cost">
+                  19.890.000₫
+                  <div class="old-cost"> 24.990.000₫ </div>
+                  <div class="product-sale">-20%</div>
+               </div>
+
+            </li>
+            <li class="product">
+               
+               <a href= "#"><img class="product-img" src="home/images/iphone-images/iphone-14-128GB.jpg"></a>
+               <a href="#" class="product-name">iPhone 14 - 128GB</a>
+               <div class="product-cost">
+                  22.750.000₫
+                  <div class="old-cost"> 27.990.000₫ </div>
+                  <div class="product-sale">-18%</div>
+               </div>
+            </li>
+            <li class="product">
+               <img class="product-tag" src="home/images/product-tags/new.png"></img>
+               <a href= "#"><img class="product-img" src="home/images/iphone-images/iphone-15-pro-max-256GB.jpg"></a>
+               <a href="#" class="product-name">iPhone 15 Pro Max - 256GB</a>
+               <div class="product-cost">
+                  29.350.000₫
+                  <div class="old-cost"> 37.990.000₫ </div>
+                  <div class="product-sale">-22%</div>
+               </div>
+            </li>
+         </ul>
+         <a href="#"><button class="more-items">Xem tất cả iPhone <i class="fa-solid fa-arrow-right"></i></button></a>
+      </div>
+      <!-- Có thể thêm thẻ product tag vào để thông báo sản phẩm đó là hàng mới,đc giảm giá hay các kiểu 
+         <img class="product-tag" src=""></img> 
+      -->
+      <div class="items" id="iPad">
+         <a href="#" class="items-name">iPad</a>
+         <ul class="list-products">
+            <li class="product">
+               <a href= "#"><img class="product-img" src="home/images/ipad-images/ipad-pro-11-inch-wifi-256gb.jpg"></a>
+               <a href="#" class="product-name">iPad Pro 11 inch Wi-Fi - 256GB</a>
+               <div class="product-cost">
+                  23.999.000₫
+                  <div class="old-cost"> 28.999.000₫ </div>
+                  <div class="product-sale">-20%</div>
+               </div>
+            </li>
+            <li class="product">
+               <a href= "#"><img class="product-img" src="home/images/ipad-images/ipad-air-11-inch-wifi-128gb.jpg"></a>
+               <a href="#" class="product-name">iPad Air 11 inch Wi-Fi - 128GB</a>
+               <div class="product-cost">
+                  17.999.000₫
+                  <div class="old-cost"> 23.990.000₫ </div>
+                  <div class="product-sale">-22%</div>
+               </div>
+
+            </li>
+            <li class="product">               
+               <a href= "#"><img class="product-img" src="home/images/ipad-images/ipad-wifi-10_9-inch-256bg.png"></a>
+               <a href="#" class="product-name">iPad Wi‑Fi 10.9 inch 256GB</a>
+               <div class="product-cost">
+                  12.500.000₫
+                  <div class="old-cost"> 13.999.000₫ </div>
+                  <div class="product-sale">-10%</div>
+               </div>
+            </li>
+            <li class="product">
+               <img class="product-tag" src="home/images/product-tags/new.png"></img>
+               <a href= "#"><img class="product-img" src="home/images/ipad-images/ipad-pro-13-inch-wifi-1tb.png"></a>
+               <a href="#" class="product-name">iPad Pro 13 inch Wi-Fi 1TB</a>
+               <div class="product-cost">
+                  48.750.000₫
+                  <div class="old-cost"> 54.999.000₫ </div>
+                  <div class="product-sale">-12%</div>
+               </div>
+            </li>
+         </ul>
+         <a href="#"><button class="more-items">Xem tất cả iPad <i class="fa-solid fa-arrow-right"></i></button></a>
+      </div>
+      <!-- Có thể thêm thẻ product tag vào để thông báo sản phẩm đó là hàng mới,đc giảm giá hay các kiểu 
+         <img class="product-tag" src=""></img> 
+      -->
+      <div class="items" id="Mac">
+         <a href="#" class="items-name">Mac</a>
+         <ul class="list-products">
+            <li class="product">
+               <a href= "#"><img class="product-img" src="home/images/mac-images/macbook-air-m1-2020-8gb-ram-256-ssd.png"></a>
+               <a href="#" class="product-name">MacBook Air M1 2020 (8GB RAM | 256GB SSD)</a>
+               <div class="product-cost">
+                  18.490.000₫
+                  <div class="old-cost"> 28.999.000₫ </div>
+                  <div class="product-sale">-36%</div>
+               </div>
+            </li>
+            <li class="product">
+               <a href= "#"><img class="product-img" src="home/images/mac-images/imac-mi-2021-24-inch-8-core-gpu-8gb-ram-512gb-ssd.webp"></a>
+               <a href="#" class="product-name">iMac M1 2021 24 inch (8 Core GPU/8GB/512GB)</a>
+               <div class="product-cost">
+                  32.999.000₫
+                  <div class="old-cost"> 45.990.000₫ </div>
+                  <div class="product-sale">-28%</div>
+               </div>
+
+            </li>
+            <li class="product">      
+               <img class="product-tag" src="home/images/product-tags/new.png"></img>         
+               <a href= "#"><img class="product-img" src="home/images/mac-images/macbook-pro-16-m1-pro-16-core-16gb-ram-1tb-ssd.png"></a>
+               <a href="#" class="product-name">MacBook Pro 16 M1 Pro (16 Core/16GB/1TB)</a>
+               <div class="product-cost">
+                  49.500.000₫
+                  <div class="old-cost"> 73.999.000₫ </div>
+                  <div class="product-sale">-31%</div>
+               </div>
+            </li>
+            <li class="product">
+               <img class="product-tag" src="home/images/product-tags/new.png"></img>
+               <a href= "#"><img class="product-img" src="home/images/mac-images/macbook-air-m2-2022-8gb-ram-256gb-ssd.png"></a>
+               <a href="#" class="product-name">MacBook Air M2 2022 (8GB RAM | 256GB SSD)</a>
+               <div class="product-cost">
+                  23.690.000₫
+                  <div class="old-cost"> 32.990.000₫ </div>
+                  <div class="product-sale">-28%</div>
+               </div>
+            </li>
+         </ul>
+         <a href="#"><button class="more-items">Xem tất cả Mac <i class="fa-solid fa-arrow-right"></i></button></a>
+      </div>
+      <!-- Có thể thêm thẻ product tag vào để thông báo sản phẩm đó là hàng mới,đc giảm giá hay các kiểu 
+         <img class="product-tag" src=""></img> 
+      -->
+      <div class="items" id="Watch">
+         <a href="#" class="items-name">Watch</a>
+         <ul class="list-products">
+            <li class="product">
+               <a href= "#"><img class="product-img" src="home/images/watch-images/apple-watch-se-nhom-2022-gps.jpeg"></a>
+               <a href="#" class="product-name">Apple Watch SE Nhôm 2022 GPS</a>
+               <div class="product-cost">
+                  5.890.000₫
+                  <div class="old-cost"> 8.990.000₫ </div>
+                  <div class="product-sale">-34%</div>
+               </div>
+            </li>
+            <li class="product">
+               <a href= "#"><img class="product-img" src="home/images/watch-images/apple-watch-series-9-nhom-gps-41mm-sport-band.png"></a>
+               <a href="#" class="product-name">Apple Watch Series 9 Nhôm (GPS) 41mm | Sport Band</a>
+               <div class="product-cost">
+                  9.390.000₫
+                  <div class="old-cost"> 11.990.000₫ </div>
+                  <div class="product-sale">-28%</div>
+               </div>
+
+            </li>
+            <li class="product">      
+               <img class="product-tag" src="home/images/product-tags/new.png"></img>         
+               <a href= "#"><img class="product-img" src="home/images/watch-images/appe-watch-ultra-2-gps-cellular-49mm-ocean-band.png"></a>
+               <a href="#" class="product-name">Apple Watch Ultra 2 GPS + Cellular 49mm Ocean Band</a>
+               <div class="product-cost">
+                  20.890.000₫
+                  <div class="old-cost"> 23.990.000₫ </div>
+                  <div class="product-sale">-12%</div>
+               </div>
+            </li>
+            <li class="product">
+               <a href= "#"><img class="product-img" src="home/images/watch-images/apple-watch-se-2023-gps-sport-band-size-s_m.jpeg"></a>
+               <a href="#" class="product-name">Apple Watch SE 2023 GPS Sport Band size S/M</a>
+               <div class="product-cost">
+                  5.890.000₫
+                  <div class="old-cost"> 8.990.000₫ </div>
+                  <div class="product-sale">-34%</div>
+               </div>
+            </li>
+         </ul>
+         <a href="#"><button class="more-items">Xem tất cả Watch <i class="fa-solid fa-arrow-right"></i></button></a>
+      </div>
+      <!-- Có thể thêm thẻ product tag vào để thông báo sản phẩm đó là hàng mới,đc giảm giá hay các kiểu 
+         <img class="product-tag" src=""></img> 
+      -->
+      <div class="items" id="Accessories">
+         <a href="#" class="items-name">Phụ kiện</a>
+         <ul class="list-products">
+            <li class="product">
+               <a href= "#"><img class="product-img" src="home/images/accessory-images/airpods-pro-2.png"></a>
+               <a href= "#" class="product-name">AirPods Pro 2</a>
+               <div class="product-cost">
+                  4.990.000₫
+                  <div class="old-cost"> 6.790.000₫ </div>
+                  <div class="product-sale">-26%</div>
+               </div>
+            </li>
+            <li class="product">
+               <a href= "#"><img class="product-img" src="home/images/accessory-images/power-adapter-20w-usb-c.png"></a>
+               <a href= "#" class="product-name">Sạc 20W USB-C Power Adapter</a>
+               <div class="product-cost">
+                  520.000₫
+                  <div class="old-cost"> 690.000₫ </div>
+                  <div class="product-sale">-24%</div>
+               </div>
+
+            </li>
+            <li class="product">         
+               <a href= "#"><img class="product-img" src="home/images/accessory-images/magic-mouse-2.jpeg"></a>
+               <a href="#" class="product-name">Magic Mouse 2</a>
+               <div class="product-cost">
+                  1.890.000₫
+                  <div class="old-cost"> 2.990.000 </div>
+                  <div class="product-sale">-36%</div>
+               </div>
+            </li>
+            <li class="product">
+               <a href="#"><img class="product-img" src="home/images/accessory-images/apple-pencil-pro.jpeg"></a>
+               <a href="#" class="product-name">Apple Pencil Pro</a>
+               <div class="product-cost">
+                  3.399.000
+                  <div class="old-cost"> 3.499.000₫ </div>
+                  <div class="product-sale">-2%</div>
+               </div>
+            </li>
+         </ul>
+         <a href="#"><button class="more-items">Xem tất cả Phụ kiện <i class="fa-solid fa-arrow-right"></i></button></a>
+      </div>
+      <!--  -->
+      <a href="#"><img id="home-bottom" src="home/images/home-bottom.jpeg"></a>
+      <a href="#"><img id="home-bottom-on-mobile" src="home/images/home-bottom-on-mobile.png"></a>
+      <!--  -->
+      <a href="#" class="news-title">Tin tức</a>
+      <div class="news">
+         <div class="news-content">
+            <a href="#">
+               <img src="home/images/news-images/0027969_cong-nghe-man-hinh-retina-cua-apple_1600.jpeg">
+               <p>Màn hình Retina là gì? Apple ứng dụng màn hình Retina cho thiết bị nào?</p>
+            </a>
+            <p class="date">05/08/2024</p>
+         </div>
+         <div class="news-content">
+            <a href="#">
+               <img src="home/images/news-images/0027857_banner iMac T8_Danh mục_1600.jpeg">
+               <p>NĂM HỌC MỚI, RINH MÁY MỚI - ƯU ĐÃI ĐỘC QUYỀN DÀNH CHO HỌC SINH SINH VIÊN</p>
+            </a>
+            <p class="date">02/08/2024</p>
+         </div>
+         <div class="news-content">
+            <a href="#">
+               <img src="home/images/news-images/0027856_banner Loa sony1 T8_TV_1600.png">
+               <p>Chill nhạc cùng Sony, rinh deal "khủng", quà tặng lên đến 2 triệu đồng!</p>
+            </a>
+            <p class="date">01/08/2024</p>
+         </div>
+      </div>
+      <a href="#" style="text-decoration: none;"><button id="more-news">Xem thêm tin tức <i class="fa-solid fa-arrow-right"></i></button></a>
+      <!--  -->
+      <div class="get-info">
+         <h1>Đăng ký nhận tin từ ShopDunk</h1>
+         <p>Thông tin sản phẩm mới nhất và chương trình khuyến mãi</p>
+         <div id="enter-email">
+            <input type="email" placeholder="Email của bạn">
+            <button>Đăng kí</button>
+         </div>
+      </div>
+
+
+   <!-- Cân nhắc dùng hiệu quả ưu tiên sắp xếp các đối tượng để tạo hiệu ứng chuyển động mượt mà -->
+   <script src="home/code-js/thanks.js"></script>
+   <script src="home/code-js/slider.js"></script> 
+   <script src="home/code-js/index.js"></script>
+   </body>
+
+</html>
