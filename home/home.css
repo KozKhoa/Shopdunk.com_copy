@@ -17,7 +17,7 @@ body {
    font-family: "Roboto", sans-serif;
    background-color: rgb(245, 245, 247);
    font-size: 12px;
-   overflow-x: hidden;
+   /* overflow-x: hidden; */
 } 
 #shopdunk-logo {
    display: inline-block;
@@ -492,12 +492,16 @@ body {
    margin: 20px auto;
 }
 .items .more-items {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: fit-content;
+   margin: 30px auto;
    text-align: center; 
-   /* width: 200px; */
    padding: 5px 20px;
-   margin: 30px 0px 0px 0px;
-   height: 50px;
+   height: 40px;
    border-radius: 10px;
+   font-size: 14px;
    background-color: white;
    border: 1px solid rgb(0, 102, 204);
    color: rgb(0, 102, 204);
@@ -619,16 +623,20 @@ body {
    color: rgb(134, 136, 169);
 }
 #more-news {
-   display: block;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: fit-content;
+   margin: 30px auto;
    text-align: center; 
-   width: 200px;
-   height: 50px;
+   padding: 5px 20px;
+   height: 40px;
    border-radius: 10px;
+   font-size: 14px;
    background-color: white;
    border: 1px solid rgb(0, 102, 204);
    color: rgb(0, 102, 204);
    cursor: pointer;
-   margin: 30px auto;
 }
 #more-news:hover {
    background-color: rgb(0, 102, 204);
