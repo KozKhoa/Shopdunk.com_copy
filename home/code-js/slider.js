@@ -1,5 +1,18 @@
-let slider_content = document.querySelector('.slider-container .slider-content');
-let slider_image = document.querySelectorAll('.slider-container .slider-content img');
+let slider_content;
+let slider_image;
+function resetPointerToSlider() {
+   if (window.innerWidth >= 700) {
+      slider_content = document.querySelector('.slider-container .slider-content#slider-img-on-pc');
+      slider_image = document.querySelectorAll('.slider-container .slider-content#slider-img-on-pc img');
+   } else   {
+      slider_content = document.querySelector('.slider-container .slider-content#slider-img-on-mobile');
+      slider_image = document.querySelectorAll('.slider-container .slider-content#slider-img-on-mobile img');
+   }
+}
+resetPointerToSlider();
+
+console.log( slider_content);
+console.log(slider_image);
 let prev_btn = document.getElementById('prev-button');
 let next_btn = document.getElementById('next-button');
 let dots_btn = document.querySelectorAll('.slider-container .slider-dots button');
@@ -8,6 +21,15 @@ let currentSlideIndex = 1;
 let startIndex = 1;
 let endIndex = numOfImages;
 const TIME_CHANGE_SLIDE = 5000;
+
+// Hàm này dùng để thay đổi xem slider_content và slider_image đang trỏ vào thẻ id slider-img-on-pc hay 
+// là slider-img-on-mobile. 
+window.addEventListener('resize', resetPointerToSlider); 
+// Hàm dưới đây dùng để ngay lập tức cố định vị trí của bức slide hiện tại nếu không thì sẽ lộ ra các bức dưới sau
+window.addEventListener('resize', () => { // 
+   slider_content.style.transition = 'none';
+   slider_content.style.transform = `translateX(${-1 * slider_image[0].offsetWidth * currentSlideIndex}px)`;
+});
 
 let HANDLE_INTERAL = setInterval(() => {
    removeActiveDot(currentSlideIndex - 1);

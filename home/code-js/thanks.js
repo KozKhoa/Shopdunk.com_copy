@@ -12,8 +12,15 @@ let currentFirstIndex = 3;
 let startTksIndex = 3;
 let endTksIndex = numOfImages_tks;
 
+// Hàm dưới đây để đặt lại vị trí ban đầu là pic-1 khi reload page
 slider_thanks_content.style.transition = 'none';
 slider_thanks_content.style.transform = `translate(${slider_thanks_image[0].offsetWidth * -startTksIndex}px)`;
+
+// Hàm này dùng dể reset lại vị trí của các bức ảnh hiện tại khi resize lại trang web
+window.addEventListener('resize', () => {
+   slider_thanks_content.style.transition = 'none';
+   slider_thanks_content.style.transform = `translate(${slider_thanks_image[0].offsetWidth * -currentFirstIndex}px)`;
+})
 
 // Mình chỉ có thể tele rồi trượt chứ không thể trượt rồi tele. Đell đc xóa comment này
 // Cân nhắc dùng order trong trường hợp này; fail
