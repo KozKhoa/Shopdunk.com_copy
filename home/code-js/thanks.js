@@ -1,8 +1,8 @@
 
 let slider_thanks_content = document.querySelector('.slider-thanks-container .slider-thanks-content');
 let slider_thanks_image = document.querySelectorAll('.slider-thanks-container .slider-thanks-content img');
-let prev_thanks_btn = document.getElementById('prev-thanks-button');
-let next_thanks_btn = document.getElementById('next-thanks-button');
+let prev_thanks_btn = document.getElementById('slider-tks-prev-button');
+let next_thanks_btn = document.getElementById('slider-tks-next-button');
 
 const TIME_TRANSITION = 0.5;
 const TIME_CHANGE_TKS_SLIDE = 7000;

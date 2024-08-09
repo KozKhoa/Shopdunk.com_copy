@@ -13,8 +13,10 @@ resetPointerToSlider();
 
 console.log( slider_content);
 console.log(slider_image);
-let prev_btn = document.getElementById('prev-button');
-let next_btn = document.getElementById('next-button');
+let prev_btn = document.getElementById('slider-prev-button');
+let next_btn = document.getElementById('slider-next-button');
+console.log('prev button = '); console.log(prev_btn);
+console.log('next button = '); console.log(next_btn);
 let dots_btn = document.querySelectorAll('.slider-container .slider-dots button');
 let numOfImages = slider_image.length - 2;
 let currentSlideIndex = 1;

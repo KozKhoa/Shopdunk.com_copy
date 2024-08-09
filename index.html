@@ -2,7 +2,7 @@
 <html>
    <head>
       <title>Đại lý ủy quyền Apple cửa hàng Apple chính hãng</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="icon" href="home/image/icon-tab.png">
       <!-- <link rel="icon" href="home/images/vietnam-flag.png"> -->
 
@@ -26,7 +26,7 @@
          <nav-content class="hide-on-mobile"><a href="https://youtube.com">Máy cũ</a></nav-content>
          <nav-content class="hide-on-mobile"><a href="https://youtube.com">Phụ kiện</a></nav-content>
          <nav-content id="service" class="hide-on-mobile" style="padding: 0px;">
-            <div class="dropdown hide-on-mobile">
+            <div class="dropdown">
                <nav-content class="dropdown-title"><a href="https://youtube.com">Dịch vụ &#x25BE;</a></nav-content>
                <div class="dropdown-table" style="left: 0px;">
                   <a href="https://youtube.com" class="dropdown-content">Bảo Hành Ủy Quyền Apple<br>(ShopDunk Care)</a>
@@ -43,12 +43,12 @@
          </nav-content>  
          <nav-content class="hide-on-mobile"><a href="https://youtube.com" >Tin tức</a></nav-content>
          <nav-content class="hide-on-mobile"><a href="https://youtube.com" >Khuyến mại</a></nav-content>
-         <nav-content><a href="https://youtube.com" id="search"><i class="fa-solid fa-magnifying-glass"></i></a></nav-content>
+         <nav-content id="search" onclick=turnOnSearchBar()><i class="fa-solid fa-magnifying-glass"></i></nav-content>
          <nav-content><a href="https://youtube.com" id="cart"><i class="fa-solid fa-cart-shopping"></i></a></nav-content>
          <nav-content class="hide-on-mobile" id="user" style="padding: 0px;">
             <script src="home/code-js/call-user-table.js"></script>
             <div class="dropdown">
-               <nav-content class="dropdown-title"><i class="fa-regular fa-user"></i></nav-content>
+               <nav-content class="dropdown-title"><a href="https://youtube.com"><i class="fa-regular fa-user"></i></a></nav-content>
                <div class="dropdown-table" style="right: 0px;">
                   <a href="https://youtube.com" class="dropdown-content">Tạo tài khoản</a>
                   <a href="https://youtube.com" class="dropdown-content">Đăng nhập</a>           
@@ -60,6 +60,15 @@
          <nav-content style="width: 15px; padding: 0px 10px;"><a href="https://youtube.com"><img src="home/images/us-flag.png" class="flag"></a></nav-content>
       </nav>
       
+      <div class="search-container">
+         <div class="search-background"></div>
+         <img src="home/assets/exit.svg" class="search-close" onclick=turnOffSearchBar()>
+         <div class="search-bar">
+            <input class="search-input" type="text" placeholder="Tìm kiếm">
+            <a href="#" class="search-button"><img src="home/assets/search.svg"></a>
+         </div>
+      </div>
+
       <div class="slide-bar" >
          <ul class="slide-bar-table">
             <li><button id="exit-button" onclick=closeMenu()>
@@ -98,7 +107,9 @@
             <li class="slide-bar-content"><a href="#" style="display: flex; justify-content: space-between;">
                Máy cũ <img src="home/assets/history.svg">
             </a></li>
-            <li class="slide-bar-content"><a href="#">Ngôn ngữ</a></li>
+            <li class="slide-bar-content"><a href="#" style="display: flex; justify-content: space-between;">
+               Ngôn ngữ <img src="home/assets/language.svg">
+            </a></li>
          </ul>
       </div>
       
@@ -120,7 +131,7 @@
             <a href="https://youtube.com"><img src="home/images/slides/slide1.png" title="pic-0-1"
                alt="This is the first picture that use to make the transition smoother"></a>
          </div>
-            <!--  -->
+            
          <div id="slider-img-on-mobile" class="slider-content">
             <a href="https://youtube.com"><img src="home/images/slides-mobile/slide9.png" title="pic-0-9"
                alt="This is the last picture that use to make the transition smoother"></a>
@@ -138,10 +149,10 @@
             <a href="https://youtube.com"><img src="home/images/slides-mobile/slide1.png" title="pic-0-1"
                alt="This is the first picture that use to make the transition smoother"></a>
          </div>
-         <div class="slider-buttons">
-            <button id="prev-button" ><i class="fa-solid fa-arrow-left"></i></button>
-            <button id="next-button" ><i class="fa-solid fa-arrow-right"></i></button>
-         </div>
+         <!-- <div class="slider-buttons"> -->
+         <button id="slider-prev-button" ><i class="fa-solid fa-arrow-left"></i></button>
+         <button id="slider-next-button" ><i class="fa-solid fa-arrow-right"></i></button>
+         <!-- </div> -->
          <div class="slider-dots">
             <button id="slider-dot-1" class="active"></button>
             <button id="slider-dot-2"></button>
@@ -180,10 +191,8 @@
             <a href="https://youtube.com" ><img title="thanks-0-3"  src="home/images/thanks/Duydam.png"
                alt="This is the first picture that only use to make the transition smoother"></a>
          </div>
-         <div class="slider-thanks-buttons">
-            <button id="prev-thanks-button" ><i class="fa-solid fa-arrow-left"></i></button>
-            <button id="next-thanks-button" ><i class="fa-solid fa-arrow-right"></i></button>
-         </div>
+         <button id="slider-tks-prev-button" ><i class="fa-solid fa-arrow-left"></i></button>
+         <button id="slider-tks-next-button" ><i class="fa-solid fa-arrow-right"></i></button>
       </div>
 <!--  -->
       <!-- Có thể thêm thẻ product tag vào để thông báo sản phẩm đó là hàng mới,đc giảm giá hay các kiểu 
@@ -459,6 +468,91 @@
          <div id="enter-email">
             <input type="email" placeholder="Email của bạn">
             <button>Đăng kí</button>
+         </div>
+      </div>
+      <!--  -->
+      <div style="background-color: rgb(29, 29, 31);">
+         <div id="about-us">
+            <div id="us">
+               <a href="#"><img id="shopdunk-logo" src="home/images/shopdunk-logo.png" alt="This is the logo for shopdunk"></a>
+               <p id="paragrah-about-us">
+                  Năm 2020, ShopDunk trở thành đại lý ủy quyền của Apple. 
+                  Chúng tôi phát triển chuỗi cửa hàng tiêu chuẩn và Apple Mono 
+                  Store nhằm mang đến trải nghiệm tốt nhất về sản phẩm và dịch vụ của 
+                  Apple cho người dùng Việt Nam.
+               </p>
+               <box id="custom-box">
+                  <p id="center-support">Tổng đài hỗ trợ :</p>
+                  <a href="#">Mua hàng: <phone> 1900.6626 (08:00 - 22:00)</phone></a>
+                  <a href="#">Bảo hành: <phone> 1900.8036 (08:00 - 22:00)</phone></a>
+               </box>
+               <box id="contact-us">
+                  <a href="#"><img src="home/images/facebook.png"></a>
+                  <a href="#"><img src="home/images/youtube.png"></a>
+                  <a href="#"><img src="home/images/zalo.png"></a>
+               </box>
+            </div>
+            <div id="information" class="about-us-colum">
+               <div class="accordion-menus">
+                  <p class="accordion-menus-title" style="display: flex; justify-content: space-between;">
+                     Thông tin <img src="home/assets/keyboard-arrow-dropdown.svg">
+                  </p>
+                  <div class="accordion-menus-table">
+                     <a href="#" class="accordion-menus-content">Tin tức</a>
+                     <a href="#" class="accordion-menus-content">Giới thiệu</a>
+                     <a href="#" class="accordion-menus-content">Check IMEI</a>
+                     <a href="#" class="accordion-menus-content">Phương thức thanh toán</a>
+                     <a href="#" class="accordion-menus-content">Thuê điểm bán lẻ</a>
+                     <a href="#" class="accordion-menus-content">Bảo hành và sữa chữa</a>
+                     <a href="#" class="accordion-menus-content">Tuyển dụng</a>
+                     <a href="#" class="accordion-menus-content">Đánh giá chất lượng, khiếu nại</a>
+                     <a href="#" class="accordion-menus-content">Tra cứu hóa đơn điện tử</a>
+                  </div>
+               </div>               
+            </div>
+            <div id="policy" class="about-us-colum">
+               <div class="accordion-menus">
+                  <p class="accordion-menus-title" style="display: flex; justify-content: space-between;">
+                     Chính sách<img src="home/assets/keyboard-arrow-dropdown.svg">
+                  </p>
+                  <div class="accordion-menus-table">
+                     <a href="#" class="accordion-menus-content">Thu cũ đổi mới</a>
+                     <a href="#" class="accordion-menus-content">Giao hàng</a>
+                     <a href="#" class="accordion-menus-content">Giao hàng (ZaloPay)</a>
+                     <a href="#" class="accordion-menus-content">Hủy giao dịch</a>
+                     <a href="#" class="accordion-menus-content">Đổi trả</a>
+                     <a href="#" class="accordion-menus-content">Bảo hành</a>
+                     <a href="#" class="accordion-menus-content">Dịch vụ</a>
+                     <a href="#" class="accordion-menus-content">Giải quyết khiếu nại</a>
+                     <a href="#" class="accordion-menus-content">Bảo mật thông tin</a>
+                     <a href="#" class="accordion-menus-content">Hướng dẫn thanh toán qua VNPAY</a>
+                  </div>
+               </div>               
+            </div>
+            <div id="adrress-contact" class="about-us-colum">
+               <div class="accordion-menus" >
+                  <p class="accordion-menus-title" style="display: flex; justify-content: space-between;">
+                     Địa chỉ & liên hệ<img src="home/assets/keyboard-arrow-dropdown.svg">
+                  </p>
+                  <div class="accordion-menus-table">
+                     <a href="#" class="accordion-menus-content">Tài khoản của tôi</a>
+                     <a href="#" class="accordion-menus-content">Đơn đặt hàng</a>
+                     <a href="#" class="accordion-menus-content">Hệ thống cửa hàng</a>
+                     <a href="#" class="accordion-menus-content">Tìm store trên Google Map</a>
+                     <a href="#" class="accordion-menus-content">Mua hàng: 1900.6626</a>
+                     <a href="#" class="accordion-menus-content">Doanh nghiệp: 0822.688.668</a>
+                     <a href="#" class="accordion-menus-content">Bán hàng doanh nghiệp</a>
+                  </div>
+               </div>               
+            </div>
+            <box id="prove">
+               <p>© 2016 Công ty Cổ Phần HESMAN Việt Nam GPDKKD: 0107465657 do Sở KH & ĐT TP. Hà Nội cấp ngày 08/06/2016.
+                  Địa chỉ: Số 76 Thái Hà, phường Trung Liệt, quận Đống Đa, thành phố Hà Nội, Việt Nam
+                  Đại diện pháp luật: PHẠM MẠNH HÒA | ĐT: 0247.305.9999 | Email: lienhe@shopdunk.com
+               </p>
+               <a href="http://online.gov.vn/(X(1)S(jfktnnku5rui3vjf5pnk4sgc))/Home/WebDetails/34144?AspxAutoDetectCookieSupport=1"
+               target="_blank"><img src="home/images/Bocongthuong.png"></a>
+            </box>
          </div>
       </div>
 
