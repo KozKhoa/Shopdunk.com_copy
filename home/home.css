@@ -1,7 +1,6 @@
 * {
    margin: 0px;
    padding: 0px;
-   /* outline: none !important; */
    /* outline: 1px solid red;  */
 }
 a {
@@ -213,26 +212,6 @@ body {
       margin-right: auto;
    }
 }
-/* .slider-container { // đéo đc xóa đến khi hoàn thành, nếu ko sẽ hối hận
-   display: block;
-   position: relative;
-   width: 100vw;
-   height: 500px;
-   margin: auto;
-   overflow: hidden;
-   z-index: 0;
-}
-.slider-container .slider-content {
-   display: flex;
-   position: absolute;
-   height: 100%;
-}
-.slider-container .slider-content img {
-   display: inline;
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-} */
 .slider-container {
    display: block;
    position: relative;
@@ -378,31 +357,6 @@ body {
 .slider-thanks-container #slider-tks-prev-button:hover, #slider-tks-next-button:hover{
    opacity: 60%;
 }
-/* .slider-thanks-container .slider-thanks-buttons {
-   display: flex;
-   justify-content: space-between;
-   position: absolute;
-   top: 35%;
-   width: 100%;
-   max-width: 1300px;
-   margin: auto;
-}
-.slider-thanks-container .slider-thanks-buttons button {
-   width: 40px;
-   height: 40px;
-   border: none;
-   border-radius: 50%;
-   color: black;
-   font-size: 20px;
-   background-color: gray;
-   opacity: 20%;
-   cursor: pointer;
-   margin: 0;
-   padding: 0;
-}
-.slider-thanks-container .slider-thanks-buttons button:hover {
-   opacity: 60%;
-} */
 @media (max-width: 700px) {
    .slider-thanks-container .slider-thanks-content a img {
       width: 90vw;
